@@ -18,5 +18,11 @@ $ ng new my-app
 $ cd my-app
 $ ng serve
 ```
+or, if you prefer yarn
 
-
+```sh
+$ ng new my-app --skip-npm
+$ cd my-app
+$ yarn
+$ ng serve
+```
