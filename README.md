@@ -18,6 +18,7 @@ $ ng new my-app
 $ cd my-app
 $ ng serve
 ```
+
 or, if you prefer yarn:
 
 ```sh
@@ -27,6 +28,8 @@ $ yarn
 $ ng serve
 ```
 
+----
+
 ### 1 - Create Component & add some properties
 
 Just run:
@@ -35,10 +38,21 @@ Just run:
 $ ng generate component user
 ```
 
-Add some properties on the new Component and use them on his template
+TO DO:
+* Add some properties on the new Component and use them on his template
 
+----
+
+### 2 - Structural Directives
+
+TO DO:
+* Initialize properties on ngOnInit
+* Create an Address Interface
+* Add an array property
+* Use *ngIf and *ngFor
+
+----
 
 License
 ----
-
 Beerware License

@@ -7,17 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  title:string = 'Angular2 First Steps!';
-  name:string = 'André';
-  email:string = 'andre.simoes@cashyt.com';
-  address = {
-    street: 'Rua da Sofia',
-    city: 'Coimbra'
-  };
+  title: string;
+  name: string;
+  email: string;
+  address: Address;
+  hobbies: string[];
+  showHobbies: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    this.title = 'Angular2 First Steps!';
+    this.name = 'André';
+    this.email = 'andre.simoes@cashyt.com';
+    this.address = {
+      street: 'Rua da Sofia',
+      city: 'Coimbra'
+    };
+    this.hobbies = ['Movies', 'Music', 'Just sleep'];
+    this.showHobbies = false;
   }
 
+  toggleHobbies(){
+    this.showHobbies = !this.showHobbies;
+  }
+  
+}
+
+export interface Address{
+  street: string;
+  city: string;
 }
