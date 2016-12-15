@@ -80,6 +80,22 @@ TO DO:
 
 ----
 
+### 5 - Routing
+
+Just run:
+
+```sh
+$ ng generate component about
+```
+
+TO DO:
+* Create about component
+* Create routing file (app.routing.ts)
+* On app module, import routing file
+* Update app component template with router-outlet & routerLinks
+
+----
+
 License
 ----
 Beerware License
