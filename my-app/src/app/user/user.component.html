@@ -2,7 +2,7 @@
   {{title}}
 </h1>
 
-<p>Hello {{name}}</p>
+<h2>Hello {{name}}</h2>
 <p><strong>Email: </strong>{{email}}</p>
 <p><strong>Address: </strong>{{address.street}}, {{address.city}}</p>
 
@@ -10,8 +10,26 @@
 <div *ngIf="showHobbies">
   <h3>Hobbies</h3>
   <ul>
-    <li *ngFor="let hobby of hobbies">
-      {{hobby}}
+    <li *ngFor="let hobby of hobbies; let i = index">
+      {{hobby}} <button (click)="deleteHobby(i)">X</button>
     </li>
   </ul>
+  <form (submit)="addHobby(hobby.value)">
+    <label>Add Hobby: </label><br/>
+    <input type="text" #hobby />
+  </form>
+</div>
+<hr />
+<div class="form-container">
+  <h3>Edit User</h3>
+  <form>
+      <label>Name: </label>
+      <input type="text" name="name" [(ngModel)]="name" /><br />
+      <label>Email: </label>
+      <input type="text" name="email" [(ngModel)]="email" /><br />
+      <label>Street: </label>
+      <input type="text" name="street" [(ngModel)]="address.street" /><br />
+      <label>City: </label>
+      <input type="text" name="city" [(ngModel)]="address.city" /><br />
+  </form>
 </div>

@@ -53,6 +53,15 @@ TO DO:
 
 ----
 
+### 3 - Forms
+
+TO DO:
+* Create form and use ngModel with user properties
+* Apply some css on user component (component scoped styles)
+* Add and remove hobbies
+
+----
+
 License
 ----
 Beerware License

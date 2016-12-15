@@ -31,7 +31,15 @@ export class UserComponent implements OnInit {
   toggleHobbies(){
     this.showHobbies = !this.showHobbies;
   }
+
+  addHobby(hobby){
+    this.hobbies.push(hobby);
+  }
   
+  deleteHobby(i){
+    this.hobbies.splice(i,1);
+  }
+
 }
 
 export interface Address{
