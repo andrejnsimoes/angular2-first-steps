@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post, PostsService } from '../services/posts.service';
 
 @Component({
   selector: 'user',
@@ -13,19 +14,27 @@ export class UserComponent implements OnInit {
   address: Address;
   hobbies: string[];
   showHobbies: boolean;
+  posts: Post[];
 
-  constructor() { }
+  constructor(private postsService:PostsService) { }
 
   ngOnInit() {
     this.title = 'Angular2 First Steps!';
     this.name = 'André';
     this.email = 'andre.simoes@cashyt.com';
+    
     this.address = {
       street: 'Rua da Sofia',
       city: 'Coimbra'
     };
+
     this.hobbies = ['Movies', 'Music', 'Just sleep'];
     this.showHobbies = false;
+
+    this.postsService.getPosts().subscribe(posts => {
+      this.posts = posts;
+    });
+    
   }
 
   toggleHobbies(){

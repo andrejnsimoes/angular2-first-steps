@@ -62,6 +62,24 @@ TO DO:
 
 ----
 
+### 4 - Services
+
+Just run:
+
+```sh
+$ mkdir src/app/services
+$ ng generate service services/posts
+```
+
+TO DO:
+* Create service, import Http and rxjs
+* Get posts from JSONPlaceholder (Fake Online REST API)
+* Create Post Interface on service
+* Import Post Service and Interface on User Component and use them
+* Import Post Service on App Module and add it on providers list
+
+----
+
 License
 ----
 Beerware License
